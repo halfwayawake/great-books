@@ -3,26 +3,24 @@
 
 <head>
 	<meta charset="utf-8">
-	<!-- TODO: 1. Set the page <title> to be "{{sitename}} | {{title}}" -->
+	<title>{{ sitename }} | {{ title }}</title>
 	<link rel="stylesheet" href="/style.css">
 	<meta name="viewport" content="width=device-width">
 </head>
 
 <body>
 	<header>
-		<h1><a href="/">
-			<!-- TODO 2. Use sitename for the page heading -->
-		</a></h1>
+		<h1><a href="/">{{ sitename }}</a></h1>
 
 		<p class="tagline">
 			A curated list of the very best books in all the world.
 		</p>
 	</header>
 	<main>
-		<!-- TODO 3: Include the body here -->
+		{{{ body }}}
 	</main>
 	<footer>
-		<p><small><a href="TODO 4. Link to the source code URL.">View source code on GitHub</a></small></p>
+		<p><small><a href="https://github.com/halfwayawake/great-books">View source code on GitHub</a></small></p>
 	</footer>
 </body>
 

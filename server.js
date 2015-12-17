@@ -47,10 +47,18 @@ app.post('/', function(req, res) {
   // Save the book if the user submitted something
   var titleSubmitted = req.body && req.body.title && req.body.title.trim();
   if(titleSubmitted) {
-    // TODO: Don't add duplicate titles
-    booklist.push({
-      title: req.body.title
-    });
+    var found = false;
+    for (var i = 0; i < booklist.length; i++) {
+      if (booklist[i].title.toLowerCase() === req.body.title.toLowerCase()) {
+        found = true;
+      }
+    }
+    
+    if (!found) {
+      booklist.push({
+        title: req.body.title
+      });
+    }
   }
 
   res.render('index', {
